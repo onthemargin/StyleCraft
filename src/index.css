@@ -19,6 +19,11 @@
   --font-serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  /* Writer-friendly reading serif for the actual prose. Charter/Iowan ship on
+     Apple devices (incl. iPad); graceful fallback elsewhere. CSP-safe: no
+     external font fetch. */
+  --font-read: Charter, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia,
+    "Times New Roman", serif;
 }
 
 html {
@@ -29,6 +34,8 @@ body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -36,6 +43,12 @@ body {
 /* Digits line up in score columns and progressions. */
 .tnum {
   font-variant-numeric: tabular-nums;
+}
+
+/* Writer-friendly reading serif for prose (rewrites, original/final, samples). */
+.reading {
+  font-family: var(--font-read);
+  letter-spacing: 0.005em;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -71,11 +71,11 @@ export function FinalPanel({
 
   return (
     <section
-      className="flex flex-col gap-4 rounded-lg border border-accent/40 bg-white/60 p-5"
+      className="flex flex-col gap-4 rounded-xl border border-accent/30 bg-accent/[0.055] p-5 sm:p-6"
       aria-label="Final result"
     >
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text-sm font-medium tracking-tight text-ink">
+        <h2 className="text-base font-medium tracking-tight text-ink">
           {authorLabel} match{" "}
           <span className="tnum text-accent">{score}</span>
           <span className="text-muted"> · winner: iteration {winner.iterationNumber}</span>
@@ -88,16 +88,16 @@ export function FinalPanel({
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2">
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1.5 rounded-lg border border-hair bg-paper/70 p-4">
           <span className="text-[10px] uppercase tracking-widest text-muted">Original</span>
-          <p className="text-[15px] leading-relaxed text-muted">{original}</p>
+          <p className="reading text-[18px] leading-relaxed text-muted">{original}</p>
         </div>
-        <div className="flex flex-col gap-1">
-          <span className="text-[10px] uppercase tracking-widest text-muted">Final</span>
+        <div className="flex flex-col gap-1.5 rounded-lg border border-accent/30 bg-white p-4">
+          <span className="text-[10px] uppercase tracking-widest text-accent">Final</span>
           <DiffText
             before={original}
             after={winner.outputText}
-            className="text-[15px] leading-relaxed text-ink"
+            className="reading text-[18px] leading-relaxed text-ink"
           />
         </div>
       </div>

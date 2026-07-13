@@ -7,10 +7,12 @@ export function ProgressLoop({
   activeModel,
   currentIteration,
   onCancel,
+  cancelLabel = "Cancel",
 }: {
   activeModel: ActiveModel;
   currentIteration: number;
   onCancel: () => void;
+  cancelLabel?: string;
 }) {
   const activeStep = activeModel === "writer" ? 0 : activeModel === "coach" ? 1 : 2;
   return (
@@ -29,7 +31,7 @@ export function ProgressLoop({
           onClick={onCancel}
           className="text-xs text-muted hover:text-bad focus-visible:outline-2 focus-visible:outline-accent"
         >
-          Cancel
+          {cancelLabel}
         </button>
       </div>
       <div className="flex items-center gap-2 text-xs" aria-live="polite">

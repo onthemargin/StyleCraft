@@ -57,7 +57,7 @@ export function IterationCard({
           <DiffText
             before={card.inputText}
             after={card.outputText}
-            className="text-[15px] leading-relaxed text-ink"
+            className="reading text-[17px] leading-relaxed text-ink"
           />
           <MetricLine m={card.metrics} />
         </div>
