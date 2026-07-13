@@ -1,0 +1,46 @@
+{
+  "name": "stylecraft",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Watch your writing climb toward a master's voice — a weak cloud model writes, a strong cloud model coaches, across 5 iterations.",
+  "scripts": {
+    "dev": "concurrently -n web,api -c cyan,magenta \"vite\" \"npm:dev:server\"",
+    "dev:server": "tsx watch server/index.ts",
+    "build": "npm run build:web && npm run build:server",
+    "build:web": "tsc -p tsconfig.json --noEmit && vite build",
+    "build:server": "esbuild server/index.ts --bundle --platform=node --format=esm --packages=external --outfile=server/dist/index.js",
+    "start": "node server/dist/index.js",
+    "preview": "vite preview",
+    "samples": "tsx scripts/generate-samples.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.4.1",
+    "google-auth-library": "^10.6.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/supertest": "^6.0.2",
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.1.2",
+    "esbuild": "^0.24.2",
+    "supertest": "^7.2.2",
+    "tailwindcss": "^4.1.13",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.0",
+    "vitest": "^4.1.2"
+  }
+}

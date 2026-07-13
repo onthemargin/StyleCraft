@@ -1,0 +1,15 @@
+node_modules/
+dist/
+server/dist/
+*.local
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Internal planning / infra notes — not for the public repo.
+plan.md

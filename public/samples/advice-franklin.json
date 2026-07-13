@@ -1,0 +1,216 @@
+{
+  "id": "advice-franklin",
+  "label": "Rambling advice, sharpened by Franklin",
+  "author": "franklin",
+  "originalText": "I think it is usually a pretty good idea to try to save at least a little bit of money when you can.",
+  "iterations": [
+    {
+      "iterationNumber": 1,
+      "inputText": "I think it is usually a pretty good idea to try to save at least a little bit of money when you can.",
+      "outputText": "Saving some money is generally a good idea.",
+      "scores": {
+        "voiceMatch": 35,
+        "diction": 40,
+        "tone": 50,
+        "fidelity": 95,
+        "overall": 49
+      },
+      "critique": [
+        {
+          "span": "Saving some money",
+          "comment": "This opening is flat and lacks the aphoristic snap of Franklin's prose."
+        },
+        {
+          "span": "generally a good idea",
+          "comment": "Too modern and conversational. Franklin is direct and prescriptive, not suggestive."
+        }
+      ],
+      "nextInstructions": [
+        "Adopt an aphoristic or proverbial structure.",
+        "Use balanced clauses or parallel phrasing (e.g., 'A penny saved is a penny earned').",
+        "Employ simple, concrete nouns and strong, active verbs.",
+        "State the advice as a timeless truth, not a personal opinion or suggestion.",
+        "Aim for a sentence length between 12 and 20 words.",
+        "Eliminate modern conversational softeners like 'generally' or 'a good idea'."
+      ],
+      "metrics": {
+        "wordCount": 8,
+        "sentenceCount": 1,
+        "avgSentenceLen": 8,
+        "adverbCount": 1,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1161,
+      "coachMs": 4758
+    },
+    {
+      "iterationNumber": 2,
+      "inputText": "Saving some money is generally a good idea.",
+      "outputText": "A prudent man saves his coin; a fool squanders his fortune.",
+      "scores": {
+        "voiceMatch": 92,
+        "diction": 90,
+        "tone": 95,
+        "fidelity": 80,
+        "overall": 90
+      },
+      "critique": [
+        {
+          "span": "squanders his fortune",
+          "comment": "This introduces a new idea (losing a 'fortune') not present in the original, slightly reducing fidelity."
+        }
+      ],
+      "nextInstructions": [
+        "Maintain the aphoristic, balanced structure.",
+        "Use simple, concrete nouns like 'coin' or 'penny'.",
+        "Employ parallel constructions (e.g., 'A prudent man...; a fool...').",
+        "Focus on the positive action of saving, not just the negative of squandering.",
+        "Ensure the meaning stays close to the original idea of saving 'a little bit'.",
+        "Keep sentences short and declarative."
+      ],
+      "metrics": {
+        "wordCount": 11,
+        "sentenceCount": 1,
+        "avgSentenceLen": 11,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1273,
+      "coachMs": 4643
+    },
+    {
+      "iterationNumber": 3,
+      "inputText": "A prudent man saves his coin; a fool squanders his fortune.",
+      "outputText": "A wise man saves his penny. A fool spends his pound. Save a little now. You will have much later.",
+      "scores": {
+        "voiceMatch": 70,
+        "diction": 75,
+        "tone": 80,
+        "fidelity": 95,
+        "overall": 77
+      },
+      "critique": [
+        {
+          "span": "A wise man saves his penny. A fool spends his pound.",
+          "comment": "This is two separate sentences. Franklin would use parallelism and connect them with a semicolon or conjunction."
+        },
+        {
+          "span": "Save a little now. You will have much later.",
+          "comment": "Too choppy and simplistic. The previous draft's single, balanced sentence was more effective and aphoristic."
+        },
+        {
+          "span": "",
+          "comment": "This is an anachronism. The previous draft's 'coin' and 'fortune' were more timeless and fitting."
+        }
+      ],
+      "nextInstructions": [
+        "Combine short, choppy sentences into a single, balanced aphorism.",
+        "Use parallelism to structure your maxims (e.g., 'A prudent man saves X; a fool squanders Y').",
+        "Connect contrasting ideas with a semicolon or conjunction, not a full stop.",
+        "Choose timeless, concrete nouns like 'coin' or 'fortune' over specific, anachronistic currency like 'penny' or 'pound'.",
+        "Strive for a single, memorable sentence that encapsulates the entire idea.",
+        "Avoid breaking a single thought into multiple, simplistic sentences."
+      ],
+      "metrics": {
+        "wordCount": 20,
+        "sentenceCount": 4,
+        "avgSentenceLen": 5,
+        "adverbCount": 0,
+        "hedgeCount": 1
+      },
+      "regressed": true,
+      "scored": true,
+      "writerMs": 1309,
+      "coachMs": 5402
+    },
+    {
+      "iterationNumber": 4,
+      "inputText": "A wise man saves his penny. A fool spends his pound. Save a little now. You will have much later.",
+      "outputText": "A prudent man hoards his coin; a spendthrift dissipates his fortune, for a little saved today becomes much hereafter.",
+      "scores": {
+        "voiceMatch": 85,
+        "diction": 88,
+        "tone": 90,
+        "fidelity": 95,
+        "overall": 88
+      },
+      "critique": [
+        {
+          "span": "dissipates his fortune",
+          "comment": "Slightly too ornate. 'Fortune' feels grander than the typical Franklin scale of pennies and pounds."
+        },
+        {
+          "span": "becomes much hereafter",
+          "comment": "A bit abstract. Franklin often prefers more concrete outcomes or simpler phrasing like 'grows great'."
+        }
+      ],
+      "nextInstructions": [
+        "Use balanced, parallel clauses (e.g., 'A penny saved is a penny earned').",
+        "Employ simple, concrete nouns (e.g., 'penny', 'shilling', 'purse').",
+        "Construct short, memorable maxims or aphorisms.",
+        "Maintain a practical, advisory tone.",
+        "Connect actions directly to their future consequences.",
+        "Avoid overly ornate or abstract language; favor plain speech.",
+        "Aim for an average sentence length of around 14-20 words."
+      ],
+      "metrics": {
+        "wordCount": 19,
+        "sentenceCount": 1,
+        "avgSentenceLen": 19,
+        "adverbCount": 0,
+        "hedgeCount": 1
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1268,
+      "coachMs": 4965
+    },
+    {
+      "iterationNumber": 5,
+      "inputText": "A prudent man hoards his coin; a spendthrift dissipates his fortune, for a little saved today becomes much hereafter.",
+      "outputText": "A wise man keeps his shillings; a fool spends his pounds. For a farthing put aside now is a pound gained later.",
+      "scores": {
+        "voiceMatch": 92,
+        "diction": 94,
+        "tone": 95,
+        "fidelity": 95,
+        "overall": 94
+      },
+      "critique": [
+        {
+          "span": "A wise man keeps his shillings; a fool spends his pounds.",
+          "comment": "Excellent parallel structure and aphoristic quality. Captures the voice perfectly."
+        },
+        {
+          "span": "a farthing put aside now is a pound gained later",
+          "comment": "Strong, concrete imagery and a clear, practical maxim. Well done."
+        }
+      ],
+      "nextInstructions": [
+        "Maintain the use of parallel structures and balanced maxims.",
+        "Continue using concrete, everyday nouns (shillings, pounds, farthings).",
+        "Keep sentences concise and declarative.",
+        "Ensure the core message remains practical and offers clear advice.",
+        "The current voice is nearly perfect. Focus on consistency in future rewrites."
+      ],
+      "metrics": {
+        "wordCount": 22,
+        "sentenceCount": 2,
+        "avgSentenceLen": 11,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1358,
+      "coachMs": 4458
+    }
+  ],
+  "winnerIndex": 4,
+  "generatedAt": "2026-07-13T00:18:19.303Z",
+  "simulated": false
+}

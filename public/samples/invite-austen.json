@@ -1,0 +1,237 @@
+{
+  "id": "invite-austen",
+  "label": "A blunt invitation, refined by Austen",
+  "author": "austen",
+  "originalText": "You should come to dinner on Friday. It will be fun and there will be a lot of people there.",
+  "iterations": [
+    {
+      "iterationNumber": 1,
+      "inputText": "You should come to dinner on Friday. It will be fun and there will be a lot of people there.",
+      "outputText": "I'd like you to come to dinner on Friday. It promises to be a fun evening with many people attending.",
+      "scores": {
+        "voiceMatch": 35,
+        "diction": 40,
+        "tone": 45,
+        "fidelity": 95,
+        "overall": 48
+      },
+      "critique": [
+        {
+          "span": "I'd like you to",
+          "comment": "This is too direct and modern. Austen's invitations are more formal and indirect."
+        },
+        {
+          "span": "fun evening",
+          "comment": "The word 'fun' is anachronistic and lacks the specific, refined vocabulary Austen would use."
+        },
+        {
+          "span": "many people attending",
+          "comment": "This phrasing is plain and lacks the characteristic elegance of the target voice."
+        }
+      ],
+      "nextInstructions": [
+        "Adopt a more formal and indirect tone for the invitation.",
+        "Use longer, more complex sentences with balanced clauses, aiming for an average of 20-25 words.",
+        "Replace modern, simple words like 'fun' with more descriptive and period-appropriate vocabulary, such as 'agreeable' or 'diverting'.",
+        "Employ understatement and a degree of polite reserve.",
+        "Structure the invitation as a formal expression of a desire for the person's company.",
+        "Refer to the gathering not just as 'dinner' but perhaps as a 'party' or 'engagement'."
+      ],
+      "metrics": {
+        "wordCount": 20,
+        "sentenceCount": 2,
+        "avgSentenceLen": 10,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1240,
+      "coachMs": 4888
+    },
+    {
+      "iterationNumber": 2,
+      "inputText": "I'd like you to come to dinner on Friday. It promises to be a fun evening with many people attending.",
+      "outputText": "It would afford me the greatest pleasure if you would consent to join us for an engagement on Friday evening, where I trust a diverting assembly of acquaintances will ensure a most agreeable time.",
+      "scores": {
+        "voiceMatch": 68,
+        "diction": 72,
+        "tone": 70,
+        "fidelity": 95,
+        "overall": 74
+      },
+      "critique": [
+        {
+          "span": "afford me the greatest pleasure",
+          "comment": "A touch too effusive. Austen's warmth is more restrained and often shown through action or dry wit."
+        },
+        {
+          "span": "a diverting assembly of acquaintances",
+          "comment": "This phrasing feels slightly more convoluted than Austen's typical elegant precision. It over-explains the 'fun'."
+        },
+        {
+          "span": "ensure a most agreeable time",
+          "comment": "The word 'ensure' sounds like a modern guarantee. Austen would imply the agreeableness, not promise it."
+        }
+      ],
+      "nextInstructions": [
+        "Adopt a more restrained and poised tone; avoid effusive declarations of pleasure.",
+        "Use balanced clauses and parallelism to structure your sentences.",
+        "Aim for a sentence length between 20 and 35 words.",
+        "Choose words that are precise and elegant, but not overly ornate or convoluted.",
+        "Incorporate a subtle, dry wit or understated observation.",
+        "Express the invitation directly, but with formal politeness (e.g., 'We should be very happy to see you...').",
+        "Imply the enjoyment of the evening rather than stating it as a guarantee.",
+        "Refer to the gathering simply, such as 'a small party' or 'our party'."
+      ],
+      "metrics": {
+        "wordCount": 34,
+        "sentenceCount": 1,
+        "avgSentenceLen": 34,
+        "adverbCount": 1,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1272,
+      "coachMs": 6733
+    },
+    {
+      "iterationNumber": 3,
+      "inputText": "It would afford me the greatest pleasure if you would consent to join us for an engagement on Friday evening, where I trust a diverting assembly of acquaintances will ensure a most agreeable time.",
+      "outputText": "We should be most happy if you would favour our small party with your company on Friday evening, where a selection of acquaintances may perhaps afford you some amusement.",
+      "scores": {
+        "voiceMatch": 82,
+        "diction": 85,
+        "tone": 88,
+        "fidelity": 95,
+        "overall": 86
+      },
+      "critique": [
+        {
+          "span": "favour our small party with your company",
+          "comment": "Slightly over-elaborate phrasing. Austen is more direct, though still formal."
+        },
+        {
+          "span": "a selection of acquaintances",
+          "comment": "A touch clinical. 'A pleasant company' or similar might feel more natural."
+        },
+        {
+          "span": "may perhaps afford you some amusement",
+          "comment": "The double hedge ('may perhaps') is a bit much. One is sufficient for the ironic understatement."
+        }
+      ],
+      "nextInstructions": [
+        "Refine sentence structure for greater balance and parallelism.",
+        "Maintain formal diction but avoid overly elaborate constructions; aim for poised directness.",
+        "Employ understated irony and gentle wit, often through a single, well-placed hedge or qualifier.",
+        "Use precise, often Latinate, vocabulary (e.g., 'amusement,' 'company,' 'acquaintances').",
+        "Construct sentences around 20-30 words long.",
+        "Ensure the tone is one of polite, formal invitation, with a hint of dry observation.",
+        "Avoid gushing or overly effusive language."
+      ],
+      "metrics": {
+        "wordCount": 29,
+        "sentenceCount": 1,
+        "avgSentenceLen": 29,
+        "adverbCount": 0,
+        "hedgeCount": 1
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1842,
+      "coachMs": 5703
+    },
+    {
+      "iterationNumber": 4,
+      "inputText": "We should be most happy if you would favour our small party with your company on Friday evening, where a selection of acquaintances may perhaps afford you some amusement.",
+      "outputText": "It would afford us considerable pleasure were you to join our small assembly on Friday evening, where a tolerable collection of acquaintances might perhaps provide some degree of diversion.",
+      "scores": {
+        "voiceMatch": 88,
+        "diction": 90,
+        "tone": 92,
+        "fidelity": 95,
+        "overall": 90
+      },
+      "critique": [
+        {
+          "span": "tolerable collection of acquaintances",
+          "comment": "This phrasing is excellent, but 'tolerable' pushes the irony slightly harder than your usual deadpan delivery."
+        },
+        {
+          "span": "provide some degree of diversion",
+          "comment": "A touch more circumlocution than necessary. 'Afford some diversion' would be more direct and Austen-like."
+        }
+      ],
+      "nextInstructions": [
+        "Maintain the balanced, formal sentence structure.",
+        "Employ precise, refined diction. 'Afford' and 'diversion' are good examples.",
+        "Use understatement and irony, but ensure it remains subtle and deadpan.",
+        "Construct sentences with balanced clauses, often using a subordinate clause to add detail or qualification.",
+        "Continue to use formal address and phrasing, such as 'were you to join'.",
+        "Aim for an average sentence length of around 24 words, avoiding excessive length or brevity.",
+        "Preserve the core meaning of the original text without adding or omitting significant information."
+      ],
+      "metrics": {
+        "wordCount": 29,
+        "sentenceCount": 1,
+        "avgSentenceLen": 29,
+        "adverbCount": 1,
+        "hedgeCount": 1
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1496,
+      "coachMs": 5209
+    },
+    {
+      "iterationNumber": 5,
+      "inputText": "It would afford us considerable pleasure were you to join our small assembly on Friday evening, where a tolerable collection of acquaintances might perhaps provide some degree of diversion.",
+      "outputText": "It would afford us considerable pleasure were you to join our small assembly on Friday evening, where a tolerable collection of acquaintances might perhaps provide some degree of diversion.",
+      "scores": {
+        "voiceMatch": 95,
+        "diction": 96,
+        "tone": 98,
+        "fidelity": 95,
+        "overall": 96
+      },
+      "critique": [
+        {
+          "span": "a tolerable collection of acquaintances",
+          "comment": "This phrasing is a masterclass in Austen's particular brand of understated, ironic social commentary."
+        },
+        {
+          "span": "might perhaps provide some degree of diversion",
+          "comment": "The layered hedging here perfectly captures the polite, non-committal tone of a formal invitation."
+        },
+        {
+          "span": "were you to join our small assembly",
+          "comment": "Excellent use of the subjunctive mood and formal vocabulary ('assembly') for a polished, period-appropriate feel."
+        }
+      ],
+      "nextInstructions": [
+        "Maintain the use of balanced clauses and formal sentence structures, such as inversions ('were you to join').",
+        "Continue to employ refined, polysyllabic diction ('considerable', 'diversion', 'acquaintances').",
+        "Use understatement and hedging ('tolerable', 'perhaps', 'some degree') to convey dry, ironic wit.",
+        "When generalizing, adopt an epigrammatic, confident tone.",
+        "Ensure sentence length averages around 20-30 words, avoiding modern brevity.",
+        "Preserve the core meaning of the original text with high fidelity.",
+        "Employ the subjunctive mood for formal requests or hypotheticals."
+      ],
+      "metrics": {
+        "wordCount": 29,
+        "sentenceCount": 1,
+        "avgSentenceLen": 29,
+        "adverbCount": 1,
+        "hedgeCount": 1
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 2070,
+      "coachMs": 6215
+    }
+  ],
+  "winnerIndex": 4,
+  "generatedAt": "2026-07-13T00:17:48.706Z",
+  "simulated": false
+}

@@ -1,0 +1,225 @@
+{
+  "id": "review-wilde",
+  "label": "A dull opinion, sharpened by Wilde",
+  "author": "wilde",
+  "originalText": "The party was fine but honestly it went on for a bit too long and was somewhat boring in places.",
+  "iterations": [
+    {
+      "iterationNumber": 1,
+      "inputText": "The party was fine but honestly it went on for a bit too long and was somewhat boring in places.",
+      "outputText": "The party was acceptable, though it became tedious and lengthy.",
+      "scores": {
+        "voiceMatch": 35,
+        "diction": 40,
+        "tone": 30,
+        "fidelity": 95,
+        "overall": 45
+      },
+      "critique": [
+        {
+          "span": "acceptable",
+          "comment": "This is faint praise. Wilde would use a more definitive, perhaps cutting, word."
+        },
+        {
+          "span": "tedious and lengthy",
+          "comment": "A flat, direct complaint. It lacks the wit and indirectness characteristic of his style."
+        },
+        {
+          "span": "The party was acceptable",
+          "comment": "This construction is too straightforward. It reports a fact rather than offering a polished observation."
+        }
+      ],
+      "nextInstructions": [
+        "Rephrase the core idea as a witty observation or a general truth, not a direct report.",
+        "Employ paradox or antithesis. Contrast pleasure with boredom, or virtue with vice.",
+        "Use more elegant and precise diction. Replace 'acceptable' and 'tedious' with sharper words.",
+        "Aim for a polished, quotable sentence structure.",
+        "Adopt a tone of urbane confidence, not earnest complaint.",
+        "Avoid simple conjunctions like 'though'. Try structuring the sentence to create the contrast implicitly."
+      ],
+      "metrics": {
+        "wordCount": 10,
+        "sentenceCount": 1,
+        "avgSentenceLen": 10,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1630,
+      "coachMs": 5681
+    },
+    {
+      "iterationNumber": 2,
+      "inputText": "The party was acceptable, though it became tedious and lengthy.",
+      "outputText": "To find a party tolerable is merely to discover that it is interminable, and that its length is precisely matched by its ennui.",
+      "scores": {
+        "voiceMatch": 82,
+        "diction": 88,
+        "tone": 85,
+        "fidelity": 95,
+        "overall": 86
+      },
+      "critique": [
+        {
+          "span": "To find a party tolerable is merely to discover",
+          "comment": "This opening is slightly wordy and lacks the immediate punch of an epigram."
+        },
+        {
+          "span": "precisely matched by its ennui",
+          "comment": "A bit too formal and academic. Wilde would be more direct, more cutting."
+        }
+      ],
+      "nextInstructions": [
+        "Aim for a sentence length between 12 and 20 words.",
+        "Construct a paradox or an antithesis: link two opposing ideas (e.g., pleasure/boredom, brevity/length).",
+        "Use elegant, precise diction. 'Ennui' is good, but ensure the surrounding words are equally polished.",
+        "State your point as a universal truth, not a personal observation.",
+        "Avoid constructions like 'to discover that...' which soften the impact.",
+        "Read your line aloud. It should sound like a confident, quotable pronouncement."
+      ],
+      "metrics": {
+        "wordCount": 23,
+        "sentenceCount": 1,
+        "avgSentenceLen": 23,
+        "adverbCount": 2,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1288,
+      "coachMs": 5335
+    },
+    {
+      "iterationNumber": 3,
+      "inputText": "To find a party tolerable is merely to discover that it is interminable, and that its length is precisely matched by its ennui.",
+      "outputText": "To find a party tolerable is merely to discover that its interminable length is matched by its profound ennui.",
+      "scores": {
+        "voiceMatch": 88,
+        "diction": 90,
+        "tone": 89,
+        "fidelity": 95,
+        "overall": 90
+      },
+      "critique": [
+        {
+          "span": "profound ennui",
+          "comment": "The adjective 'profound' feels slightly too earnest. Ennui stands alone with sufficient weight."
+        },
+        {
+          "span": "matched by its profound ennui",
+          "comment": "This phrasing is good, but could be more economical. Consider a tighter construction."
+        }
+      ],
+      "nextInstructions": [
+        "Aim for an average sentence length of 14-18 words.",
+        "Use paradox, antithesis, or reversal of cliché.",
+        "Employ elegant, precise, and urbane diction (e.g., 'ennui', 'tolerable').",
+        "Maintain a confident, polished, and epigrammatic tone.",
+        "Avoid earnestness or over-explanation; let the wit carry the meaning.",
+        "Construct sentences with a balanced, rhythmic quality.",
+        "Focus on making the statement quotable and concise."
+      ],
+      "metrics": {
+        "wordCount": 19,
+        "sentenceCount": 1,
+        "avgSentenceLen": 19,
+        "adverbCount": 1,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1360,
+      "coachMs": 5090
+    },
+    {
+      "iterationNumber": 4,
+      "inputText": "To find a party tolerable is merely to discover that its interminable length is matched by its profound ennui.",
+      "outputText": "To deem a gathering merely tolerable is to confess that its excessive duration is rivalled only by its profound and inescapable ennui.",
+      "scores": {
+        "voiceMatch": 85,
+        "diction": 88,
+        "tone": 86,
+        "fidelity": 95,
+        "overall": 88
+      },
+      "critique": [
+        {
+          "span": "To deem a gathering merely tolerable",
+          "comment": "This opening is slightly more ponderous and less direct than the previous version."
+        },
+        {
+          "span": "profound and inescapable ennui",
+          "comment": "The addition of \"inescapable\" feels like over-explanation. \"Profound ennui\" was sufficient."
+        },
+        {
+          "span": "excessive duration is rivalled only by",
+          "comment": "This phrasing is less sharp and economical than the previous draft's \"interminable length is matched by\"."
+        }
+      ],
+      "nextInstructions": [
+        "Aim for maximum wit with minimum words. Every word must justify its existence.",
+        "Refine your sentence structure for balance and rhythm. Think in terms of antithesis: X is matched by Y.",
+        "Avoid piling on adjectives or adverbs; a single, perfectly chosen word is more powerful.",
+        "Use precise, elegant diction, but avoid anything that feels overly academic or stuffy.",
+        "Construct a polished, quotable epigram that reverses a common expectation about social gatherings.",
+        "Ensure the tone is one of confident, urbane pronouncement, not laborious explanation."
+      ],
+      "metrics": {
+        "wordCount": 22,
+        "sentenceCount": 1,
+        "avgSentenceLen": 22,
+        "adverbCount": 1,
+        "hedgeCount": 0
+      },
+      "regressed": true,
+      "scored": true,
+      "writerMs": 1338,
+      "coachMs": 5916
+    },
+    {
+      "iterationNumber": 5,
+      "inputText": "To deem a gathering merely tolerable is to confess that its excessive duration is rivalled only by its profound and inescapable ennui.",
+      "outputText": "To find a party merely tolerable is to admit its length surpasses its interest.",
+      "scores": {
+        "voiceMatch": 92,
+        "diction": 94,
+        "tone": 93,
+        "fidelity": 98,
+        "overall": 94
+      },
+      "critique": [
+        {
+          "span": "merely tolerable",
+          "comment": "A slight improvement is possible. Consider a word with more finality or judgment than 'tolerable'."
+        },
+        {
+          "span": "surpasses its interest",
+          "comment": "This is good, but lacks the sharp, cutting quality of Wilde's best epigrams. It's a little too explanatory."
+        }
+      ],
+      "nextInstructions": [
+        "Refine your epigram to be even more concise and quotable.",
+        "Employ antithesis or paradox more sharply. Contrast the social expectation with the private reality.",
+        "Use diction that is elegant but also carries a subtle, cutting judgment.",
+        "Formulate the sentence as a universal social law, not just a personal observation.",
+        "Avoid explaining the mechanism ('surpasses its interest'); let the wit imply the meaning.",
+        "Aim for a structure like 'The only thing worse than X is Y'."
+      ],
+      "metrics": {
+        "wordCount": 14,
+        "sentenceCount": 1,
+        "avgSentenceLen": 14,
+        "adverbCount": 1,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1429,
+      "coachMs": 5715
+    }
+  ],
+  "winnerIndex": 4,
+  "generatedAt": "2026-07-13T00:18:54.085Z",
+  "simulated": false
+}

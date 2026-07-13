@@ -1,0 +1,32 @@
+[
+  {
+    "id": "meeting-hemingway",
+    "label": "A vague work update, in Hemingway's voice",
+    "author": "hemingway"
+  },
+  {
+    "id": "product-orwell",
+    "label": "Corporate jargon, cleared by Orwell",
+    "author": "orwell"
+  },
+  {
+    "id": "trip-twain",
+    "label": "A flat travel note, told by Twain",
+    "author": "twain"
+  },
+  {
+    "id": "invite-austen",
+    "label": "A blunt invitation, refined by Austen",
+    "author": "austen"
+  },
+  {
+    "id": "advice-franklin",
+    "label": "Rambling advice, sharpened by Franklin",
+    "author": "franklin"
+  },
+  {
+    "id": "review-wilde",
+    "label": "A dull opinion, sharpened by Wilde",
+    "author": "wilde"
+  }
+]

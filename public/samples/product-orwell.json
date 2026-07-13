@@ -1,0 +1,219 @@
+{
+  "id": "product-orwell",
+  "label": "Corporate jargon, cleared by Orwell",
+  "author": "orwell",
+  "originalText": "We are leveraging synergies to facilitate the optimization of our core deliverables going forward.",
+  "iterations": [
+    {
+      "iterationNumber": 1,
+      "inputText": "We are leveraging synergies to facilitate the optimization of our core deliverables going forward.",
+      "outputText": "We are using collaboration to improve how we deliver our main products and services.",
+      "scores": {
+        "voiceMatch": 65,
+        "diction": 70,
+        "tone": 75,
+        "fidelity": 95,
+        "overall": 73
+      },
+      "critique": [
+        {
+          "span": "using collaboration",
+          "comment": "Slightly abstract. Orwell would use a more concrete term for teamwork."
+        },
+        {
+          "span": "how we deliver",
+          "comment": "This phrasing is a bit soft and indirect. Be more declarative."
+        },
+        {
+          "span": "products and services",
+          "comment": "A standard business phrase. Orwell would likely use a single, plainer word."
+        }
+      ],
+      "nextInstructions": [
+        "Replace abstract nouns like 'collaboration' with simpler, more concrete words.",
+        "Use direct, declarative sentences. Avoid constructions like 'how we...'",
+        "Eliminate business-speak like 'products and services' in favor of plain English.",
+        "Aim for an average sentence length of around 18 words.",
+        "Use active voice exclusively.",
+        "Choose short, familiar words over longer, more formal ones."
+      ],
+      "metrics": {
+        "wordCount": 14,
+        "sentenceCount": 1,
+        "avgSentenceLen": 14,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1405,
+      "coachMs": 5076
+    },
+    {
+      "iterationNumber": 2,
+      "inputText": "We are using collaboration to improve how we deliver our main products and services.",
+      "outputText": "We work together to make our main work better.",
+      "scores": {
+        "voiceMatch": 88,
+        "diction": 92,
+        "tone": 90,
+        "fidelity": 95,
+        "overall": 91
+      },
+      "critique": [
+        {
+          "span": "main work",
+          "comment": "Slightly vague. Orwell would prefer a more concrete term if one were available."
+        },
+        {
+          "span": "",
+          "comment": "This is good, plain language, but 'improve' might be slightly more precise without being pretentious."
+        }
+      ],
+      "nextInstructions": [
+        "Use plain, Anglo-Saxon words. Prefer 'work' over 'leverage', 'together' over 'synergies'.",
+        "Keep sentences short and direct. Aim for an average of 15-20 words.",
+        "Use the active voice exclusively. 'We work,' not 'synergies are leveraged.'",
+        "Be concrete. Replace abstract jargon like 'core deliverables' with tangible equivalents.",
+        "Eliminate euphemisms and business-speak. State the meaning plainly.",
+        "Read the sentence aloud. It should sound like a person speaking, not a corporate memo.",
+        "If a specific term for the 'main work' exists, use it. For example, 'We work together to improve our reports.'"
+      ],
+      "metrics": {
+        "wordCount": 9,
+        "sentenceCount": 1,
+        "avgSentenceLen": 9,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1367,
+      "coachMs": 5750
+    },
+    {
+      "iterationNumber": 3,
+      "inputText": "We work together to make our main work better.",
+      "outputText": "We work together to make our main work better.",
+      "scores": {
+        "voiceMatch": 95,
+        "diction": 98,
+        "tone": 96,
+        "fidelity": 95,
+        "overall": 96
+      },
+      "critique": [
+        {
+          "span": "",
+          "comment": "The future tense is slightly less direct than the simple present. Orwell often uses the present."
+        }
+      ],
+      "nextInstructions": [
+        "Use the simple present tense for direct, declarative statements.",
+        "Prefer short, Anglo-Saxon words over Latinate ones (e.g., 'work' over 'products').",
+        "Ensure every word serves a clear purpose; eliminate anything that feels like filler.",
+        "Construct simple, direct sentences, typically under 25 words.",
+        "Use active voice exclusively.",
+        "Translate abstract corporate jargon into concrete, everyday actions.",
+        "Maintain a plain, unadorned, and slightly formal tone."
+      ],
+      "metrics": {
+        "wordCount": 9,
+        "sentenceCount": 1,
+        "avgSentenceLen": 9,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1466,
+      "coachMs": 4779
+    },
+    {
+      "iterationNumber": 4,
+      "inputText": "We work together to make our main work better.",
+      "outputText": "We join forces. We make our main work better.",
+      "scores": {
+        "voiceMatch": 85,
+        "diction": 88,
+        "tone": 90,
+        "fidelity": 95,
+        "overall": 88
+      },
+      "critique": [
+        {
+          "span": "join forces",
+          "comment": "Slightly clichéd. 'Work together' is more direct and less of a set phrase."
+        },
+        {
+          "span": "We join forces. We make",
+          "comment": "The staccato rhythm feels too simple, even for Orwell. It loses the flow of thought."
+        }
+      ],
+      "nextInstructions": [
+        "Use plain, direct, Anglo-Saxon words. Avoid jargon, euphemism, and cliché.",
+        "Aim for an average sentence length of around 18 words, varying for effect.",
+        "Connect clauses logically; do not break simple cause-and-effect into separate, choppy sentences.",
+        "Use active voice and concrete nouns.",
+        "Read the draft aloud to check its rhythm. It should sound natural, not robotic.",
+        "Ensure the meaning of the original corporate jargon is fully captured.",
+        "The previous draft's 'work together' was stronger than 'join forces'. Revert to that phrasing."
+      ],
+      "metrics": {
+        "wordCount": 9,
+        "sentenceCount": 2,
+        "avgSentenceLen": 4.5,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": true,
+      "scored": true,
+      "writerMs": 1303,
+      "coachMs": 5616
+    },
+    {
+      "iterationNumber": 5,
+      "inputText": "We join forces. We make our main work better.",
+      "outputText": "We work together. We make our main work better.",
+      "scores": {
+        "voiceMatch": 70,
+        "diction": 80,
+        "tone": 85,
+        "fidelity": 95,
+        "overall": 80
+      },
+      "critique": [
+        {
+          "span": "We work together.",
+          "comment": "This is too simplistic. It sounds more like a children's book than Orwell's direct prose."
+        },
+        {
+          "span": "We make our main work better.",
+          "comment": "The phrasing is slightly awkward and less direct than the previous draft's 'join forces'."
+        }
+      ],
+      "nextInstructions": [
+        "Combine the two sentences into one.",
+        "Aim for a sentence length between 15 and 25 words.",
+        "Use plain, direct language to describe the action of improving work through cooperation.",
+        "Avoid overly simplistic, primer-like sentences.",
+        "Translate the corporate jargon ('synergies', 'optimization') into concrete actions.",
+        "State the goal directly: what is being improved and how?"
+      ],
+      "metrics": {
+        "wordCount": 9,
+        "sentenceCount": 2,
+        "avgSentenceLen": 4.5,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": true,
+      "scored": true,
+      "writerMs": 1205,
+      "coachMs": 4376
+    }
+  ],
+  "winnerIndex": 2,
+  "generatedAt": "2026-07-13T00:16:39.985Z",
+  "simulated": false
+}

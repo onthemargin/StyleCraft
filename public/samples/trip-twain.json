@@ -1,0 +1,215 @@
+{
+  "id": "trip-twain",
+  "label": "A flat travel note, told by Twain",
+  "author": "twain",
+  "originalText": "The trip was nice and we saw some interesting things and the food was pretty good overall.",
+  "iterations": [
+    {
+      "iterationNumber": 1,
+      "inputText": "The trip was nice and we saw some interesting things and the food was pretty good overall.",
+      "outputText": "The trip was enjoyable, featuring interesting sights and generally good food.",
+      "scores": {
+        "voiceMatch": 15,
+        "diction": 10,
+        "tone": 12,
+        "fidelity": 95,
+        "overall": 25
+      },
+      "critique": [
+        {
+          "span": "enjoyable",
+          "comment": "Too formal and abstract. Twain would use a simpler, more concrete word."
+        },
+        {
+          "span": "featuring interesting sights",
+          "comment": "This sounds like a travel brochure, not a wry, personal account."
+        },
+        {
+          "span": "generally good food",
+          "comment": "Lacks any of Twain's characteristic voice or specific imagery. Utterly generic."
+        }
+      ],
+      "nextInstructions": [
+        "Adopt a first-person, conversational 'I' or 'we'.",
+        "Use plain, vernacular American English, not formal summary words like 'enjoyable' or 'featuring'.",
+        "Replace abstractions like 'interesting sights' with one or two concrete, vivid examples.",
+        "Inject wry understatement or a touch of dry humor.",
+        "Aim for a sentence length between 15-20 words.",
+        "Read your draft aloud to check for a natural, spoken rhythm."
+      ],
+      "metrics": {
+        "wordCount": 11,
+        "sentenceCount": 1,
+        "avgSentenceLen": 11,
+        "adverbCount": 1,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1163,
+      "coachMs": 5042
+    },
+    {
+      "iterationNumber": 2,
+      "inputText": "The trip was enjoyable, featuring interesting sights and generally good food.",
+      "outputText": "Well, we had ourselves a tolerable sort of time, seeing a gawky steamboat or two, and the grub wasn't half-bad.",
+      "scores": {
+        "voiceMatch": 78,
+        "diction": 85,
+        "tone": 88,
+        "fidelity": 95,
+        "overall": 85
+      },
+      "critique": [
+        {
+          "span": "tolerable sort of time",
+          "comment": "Good, but a bit of a cliché. Can you make the understatement sharper, more specific?"
+        },
+        {
+          "span": "gawky steamboat or two",
+          "comment": "This is a strong image. The specificity is excellent. Keep this kind of detail."
+        },
+        {
+          "span": "the grub wasn't half-bad",
+          "comment": "The diction is right, but the phrasing feels a little modern. Try for a more 19th-century turn."
+        }
+      ],
+      "nextInstructions": [
+        "Adopt a conversational, first-person 'I' or 'we' point of view.",
+        "Use plain, direct, American vernacular. Words like 'grub' are good.",
+        "Employ wry understatement. Instead of saying something is good, say it 'wasn't half-bad' or 'tolerable'.",
+        "Ground the description in concrete, sensory details. 'Gawky steamboat' is a good example.",
+        "Keep sentences relatively short and direct, around 16-20 words.",
+        "Incorporate conversational asides or hedges, like 'Well,' or 'I reckon'.",
+        "Aim for a tone of dry, observational humor.",
+        "Preserve the original meaning: the trip was decent, the sights were interesting, the food was acceptable."
+      ],
+      "metrics": {
+        "wordCount": 20,
+        "sentenceCount": 1,
+        "avgSentenceLen": 20,
+        "adverbCount": 0,
+        "hedgeCount": 1
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1217,
+      "coachMs": 5839
+    },
+    {
+      "iterationNumber": 3,
+      "inputText": "Well, we had ourselves a tolerable sort of time, seeing a gawky steamboat or two, and the grub wasn't half-bad.",
+      "outputText": "Well, I reckon our little excursion wasn't half-bad, seeing a gawky steamboat or two. The grub we put away was tolerable, too.",
+      "scores": {
+        "voiceMatch": 88,
+        "diction": 92,
+        "tone": 94,
+        "fidelity": 95,
+        "overall": 91
+      },
+      "critique": [
+        {
+          "span": "The grub we put away was tolerable, too.",
+          "comment": "Slightly clunky phrasing. The previous draft's construction was more natural and direct."
+        }
+      ],
+      "nextInstructions": [
+        "Use vernacular diction like 'reckon', 'grub', and 'tolerable'.",
+        "Employ wry understatement; 'wasn't half-bad' and 'tolerable' are good examples.",
+        "Keep sentences relatively short and conversational, around 16 words on average.",
+        "Ground the description in concrete, homely images like 'a gawky steamboat'.",
+        "Maintain a dry, slightly detached, and conversational tone.",
+        "Structure sentences simply, as if speaking aloud.",
+        "Refine sentence construction for a more natural, spoken rhythm."
+      ],
+      "metrics": {
+        "wordCount": 22,
+        "sentenceCount": 2,
+        "avgSentenceLen": 11,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1384,
+      "coachMs": 5344
+    },
+    {
+      "iterationNumber": 4,
+      "inputText": "Well, I reckon our little excursion wasn't half-bad, seeing a gawky steamboat or two. The grub we put away was tolerable, too.",
+      "outputText": "Well, I reckon that little trip was tolerable. We saw a gawky steamboat or two. The grub we put away wasn't half-bad, either.",
+      "scores": {
+        "voiceMatch": 92,
+        "diction": 95,
+        "tone": 96,
+        "fidelity": 95,
+        "overall": 94
+      },
+      "critique": [
+        {
+          "span": "The grub we put away wasn't half-bad, either.",
+          "comment": "This phrasing is good, but slightly less distinctive than your previous version's structure."
+        }
+      ],
+      "nextInstructions": [
+        "Maintain the use of vernacular terms like 'reckon' and 'grub'.",
+        "Continue to employ wry understatement, such as 'tolerable' and 'wasn't half-bad'.",
+        "Use vivid, concrete, and slightly unusual adjectives like 'gawky'.",
+        "Keep sentences relatively short and conversational.",
+        "Experiment with sentence structures that feel like spoken asides or afterthoughts.",
+        "Ensure the tone remains dry and conversational, not overly enthusiastic."
+      ],
+      "metrics": {
+        "wordCount": 23,
+        "sentenceCount": 3,
+        "avgSentenceLen": 7.7,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1348,
+      "coachMs": 4399
+    },
+    {
+      "iterationNumber": 5,
+      "inputText": "Well, I reckon that little trip was tolerable. We saw a gawky steamboat or two. The grub we put away wasn't half-bad, either.",
+      "outputText": "Well, I reckon that little trip was tolerable. We saw a gawky steamboat or two, as I recall. The grub we put away wasn't half-bad, either.",
+      "scores": {
+        "voiceMatch": 93,
+        "diction": 96,
+        "tone": 96,
+        "fidelity": 95,
+        "overall": 95
+      },
+      "critique": [
+        {
+          "span": "as I recall",
+          "comment": "This feels a bit like a modern conversational filler, not quite Twain's specific vernacular rhythm."
+        }
+      ],
+      "nextInstructions": [
+        "Maintain the vernacular diction like 'reckon', 'gawky', and 'grub'.",
+        "Use wry understatement, such as 'tolerable' and 'wasn't half-bad'.",
+        "Employ vivid, concrete, and slightly humorous images like 'gawky steamboat'.",
+        "Keep sentences relatively short and direct, with a conversational rhythm.",
+        "Incorporate a sense of spoken storytelling, as if recounting events aloud.",
+        "Avoid modern-sounding conversational fillers; stick to a more 19th-century American vernacular pattern."
+      ],
+      "metrics": {
+        "wordCount": 26,
+        "sentenceCount": 3,
+        "avgSentenceLen": 8.7,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1675,
+      "coachMs": 4642
+    }
+  ],
+  "winnerIndex": 4,
+  "generatedAt": "2026-07-13T00:17:12.038Z",
+  "simulated": false
+}

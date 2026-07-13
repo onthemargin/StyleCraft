@@ -1,0 +1,243 @@
+{
+  "id": "meeting-hemingway",
+  "label": "A vague work update, in Hemingway's voice",
+  "author": "hemingway",
+  "originalText": "The meeting was good and we discussed many things that will probably help us in the future.",
+  "iterations": [
+    {
+      "iterationNumber": 1,
+      "inputText": "The meeting was good and we discussed many things that will probably help us in the future.",
+      "outputText": "The meeting was productive, and our discussions covered topics that will likely benefit us in the future.",
+      "scores": {
+        "voiceMatch": 35,
+        "diction": 30,
+        "tone": 40,
+        "fidelity": 95,
+        "overall": 44
+      },
+      "critique": [
+        {
+          "span": "productive",
+          "comment": "This is an abstract, corporate word. Hemingway would use a simpler, more concrete term."
+        },
+        {
+          "span": "our discussions covered topics",
+          "comment": "Too formal and indirect. State what happened simply. 'We talked about things.'"
+        },
+        {
+          "span": "likely benefit us in the future",
+          "comment": "Abstract and speculative. Hemingway's prose is grounded in the immediate and concrete."
+        }
+      ],
+      "nextInstructions": [
+        "Use short, declarative sentences. Aim for an average of 8-10 words.",
+        "Replace abstract words like 'productive' and 'benefit' with simple, concrete language.",
+        "Use 'and' to connect simple clauses instead of complex sentence structures.",
+        "Focus on nouns and verbs. Eliminate modifiers that don't add concrete meaning.",
+        "State what happened directly. Avoid formal phrasing like 'discussions covered topics'.",
+        "Remove speculative or hedging words like 'likely'."
+      ],
+      "metrics": {
+        "wordCount": 17,
+        "sentenceCount": 1,
+        "avgSentenceLen": 17,
+        "adverbCount": 0,
+        "hedgeCount": 1
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1566,
+      "coachMs": 5529
+    },
+    {
+      "iterationNumber": 2,
+      "inputText": "The meeting was productive, and our discussions covered topics that will likely benefit us in the future.",
+      "outputText": "The meeting was good. We talked. Things will help us.",
+      "scores": {
+        "voiceMatch": 65,
+        "diction": 70,
+        "tone": 72,
+        "fidelity": 50,
+        "overall": 66
+      },
+      "critique": [
+        {
+          "span": "We talked.",
+          "comment": "Too clipped. Lacks the deliberate, rhythmic quality of the target voice."
+        },
+        {
+          "span": "Things will help us.",
+          "comment": "Vague and abstract. Hemingway uses concrete nouns. What things?"
+        },
+        {
+          "span": "Things will help us.",
+          "comment": "This drops the original meaning about future benefit and discussion topics."
+        }
+      ],
+      "nextInstructions": [
+        "Use short, declarative sentences, averaging 8-15 words.",
+        "Connect simple clauses with 'and'.",
+        "Use concrete, everyday nouns and strong verbs.",
+        "Avoid abstract words like 'things'.",
+        "Eliminate adverbs and ornate adjectives.",
+        "Employ repetition of simple words for rhythm and emphasis.",
+        "Preserve the original meaning: a good meeting, discussion of many topics, future benefit.",
+        "Focus on what was done, not on internal feelings or abstract summaries."
+      ],
+      "metrics": {
+        "wordCount": 10,
+        "sentenceCount": 3,
+        "avgSentenceLen": 3.3,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1272,
+      "coachMs": 5211
+    },
+    {
+      "iterationNumber": 3,
+      "inputText": "The meeting was good. We talked. Things will help us.",
+      "outputText": "The meeting went well. We talked. We covered much ground. It will help us. It will help us later.",
+      "scores": {
+        "voiceMatch": 78,
+        "diction": 80,
+        "tone": 82,
+        "fidelity": 95,
+        "overall": 82
+      },
+      "critique": [
+        {
+          "span": "went well",
+          "comment": "Slightly too colloquial. \"Was good\" is simpler and more direct."
+        },
+        {
+          "span": "covered much ground",
+          "comment": "This is an idiom. Hemingway used concrete, literal language, not figures of speech."
+        },
+        {
+          "span": "It will help us later.",
+          "comment": "Redundant. The previous sentence establishes the future benefit. Unnecessary repetition feels weak, not emphatic."
+        }
+      ],
+      "nextInstructions": [
+        "Use short, declarative sentences. Aim for an average of 5-10 words.",
+        "Join independent clauses with 'and' instead of starting new sentences.",
+        "Use simple, concrete nouns and strong verbs. Avoid idioms like 'covered ground'.",
+        "Eliminate adverbs and abstract language.",
+        "Repeat key words for emphasis, but avoid redundant sentences.",
+        "Stick to a neutral, observational tone. State facts without embellishment.",
+        "Preserve the original meaning: a good meeting occurred, and its results will be helpful in the future."
+      ],
+      "metrics": {
+        "wordCount": 19,
+        "sentenceCount": 5,
+        "avgSentenceLen": 3.8,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1465,
+      "coachMs": 5407
+    },
+    {
+      "iterationNumber": 4,
+      "inputText": "The meeting went well. We talked. We covered much ground. It will help us. It will help us later.",
+      "outputText": "The meeting was good. We talked. We talked about many things. The things will help us. They will help us later.",
+      "scores": {
+        "voiceMatch": 85,
+        "diction": 88,
+        "tone": 85,
+        "fidelity": 90,
+        "overall": 87
+      },
+      "critique": [
+        {
+          "span": "We talked. We talked about many things.",
+          "comment": "This repetition is effective, but could be combined into a single, stronger sentence."
+        },
+        {
+          "span": "The things will help us.",
+          "comment": "Slightly clunky. The repetition of 'things' feels less intentional than Hemingway's typical style."
+        },
+        {
+          "span": "They will help us later.",
+          "comment": "The word 'later' is a bit vague. Hemingway would be more concrete or omit it."
+        }
+      ],
+      "nextInstructions": [
+        "Use short, declarative sentences. Average 8-12 words.",
+        "Favor simple, concrete nouns and strong verbs.",
+        "Eliminate adverbs and abstract words like 'things'.",
+        "Use repetition deliberately for rhythm and emphasis, not just to break up ideas.",
+        "Connect simple, related ideas with 'and'.",
+        "Show, don't tell. Instead of 'the meeting was good', what happened?",
+        "Maintain an objective, understated tone.",
+        "Preserve the original meaning: a good meeting occurred, and its results will be useful."
+      ],
+      "metrics": {
+        "wordCount": 21,
+        "sentenceCount": 5,
+        "avgSentenceLen": 4.2,
+        "adverbCount": 0,
+        "hedgeCount": 1
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1751,
+      "coachMs": 6360
+    },
+    {
+      "iterationNumber": 5,
+      "inputText": "The meeting was good. We talked. We talked about many things. The things will help us. They will help us later.",
+      "outputText": "The meeting went well. We talked. We talked about plans. The plans will help. They will help us later.",
+      "scores": {
+        "voiceMatch": 92,
+        "diction": 94,
+        "tone": 90,
+        "fidelity": 85,
+        "overall": 91
+      },
+      "critique": [
+        {
+          "span": "The meeting went well.",
+          "comment": "Slightly too idiomatic. 'The meeting was good' is more direct and concrete."
+        },
+        {
+          "span": "We talked about plans.",
+          "comment": "The abstract noun 'plans' feels less concrete than 'things'."
+        },
+        {
+          "span": "They will help us later.",
+          "comment": "The word 'later' is slightly less direct than 'in the future'."
+        }
+      ],
+      "nextInstructions": [
+        "Use short, declarative sentences, averaging 5-10 words.",
+        "Favor simple, concrete nouns and strong verbs.",
+        "Eliminate adverbs and abstract nouns like 'plans'.",
+        "Use repetition of core words ('talked', 'help') for rhythm.",
+        "Connect simple ideas with 'and' instead of starting new sentences.",
+        "Maintain an objective, understated tone.",
+        "Preserve the original meaning: a good meeting, discussion of many things, future help.",
+        "Replace 'went well' with a more direct statement like 'was good'."
+      ],
+      "metrics": {
+        "wordCount": 19,
+        "sentenceCount": 5,
+        "avgSentenceLen": 3.8,
+        "adverbCount": 0,
+        "hedgeCount": 0
+      },
+      "regressed": false,
+      "scored": true,
+      "writerMs": 1302,
+      "coachMs": 6093
+    }
+  ],
+  "winnerIndex": 4,
+  "generatedAt": "2026-07-13T00:16:07.639Z",
+  "simulated": false
+}
