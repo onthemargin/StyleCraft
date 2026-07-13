@@ -35,6 +35,22 @@ function budgetOk(res: Response): boolean {
   return false;
 }
 
+/**
+ * Log the real (possibly infra-revealing) detail server-side; return a generic
+ * message to the client. Upstream Vertex errors can embed the project id and
+ * internal resource paths — those must never reach the browser.
+ */
+function failSafely(res: Response, status: number, clientMsg: string, detail: unknown): void {
+  console.error(
+    JSON.stringify({
+      msg: "stylecraft-upstream-error",
+      status,
+      detail: detail instanceof Error ? detail.message : String(detail),
+    }),
+  );
+  res.status(status).json({ error: clientMsg });
+}
+
 // ── Writer ────────────────────────────────────────────────────────────────────
 router.post("/writer", apiLimiter, async (req: Request, res: Response) => {
   const parsed = writerRequestSchema.safeParse(req.body);
@@ -49,9 +65,7 @@ router.post("/writer", apiLimiter, async (req: Request, res: Response) => {
       : await runWriter(parsed.data, (await getClients()).writer);
     res.json({ text });
   } catch (err) {
-    res.status(502).json({
-      error: `Writer failed: ${err instanceof Error ? err.message : "unknown"}`,
-    });
+    failSafely(res, 502, "The rewriting service is temporarily unavailable.", err);
   }
 });
 
@@ -68,15 +82,13 @@ router.post("/coach", apiLimiter, async (req: Request, res: Response) => {
       ? ({ ok: true, ...mockCoachEvaluate(parsed.data) } as const)
       : await runCoach(parsed.data, (await getClients()).coach);
     if (!result.ok) {
-      res.status(502).json({ error: result.error });
+      failSafely(res, 502, "The Coach couldn't score this draft.", result.error);
       return;
     }
     const { ok: _ok, ...payload } = result;
     res.json(payload);
   } catch (err) {
-    res.status(502).json({
-      error: `Coach failed: ${err instanceof Error ? err.message : "unknown"}`,
-    });
+    failSafely(res, 502, "The scoring service is temporarily unavailable.", err);
   }
 });
 
