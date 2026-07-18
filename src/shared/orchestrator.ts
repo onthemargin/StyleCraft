@@ -7,7 +7,7 @@ import type {
   TextMetrics,
   WriterRequest,
 } from "./types.ts";
-import { ITERATIONS, FIDELITY_FLOOR } from "./constants.ts";
+import { ITERATIONS } from "./constants.ts";
 import { computeMetrics } from "./text-metrics.ts";
 import { isRegression, pickBest, pickBestIndex } from "./scoring.ts";
 import { dedupeInstructions } from "./instructions.ts";
@@ -106,12 +106,15 @@ export async function runClimb(opts: ClimbOptions): Promise<ClimbResult> {
     if (scored && scores) {
       // F12: the Coach returns a consolidated replacement set (deduped/capped).
       instructions = dedupeInstructions(iter.nextInstructions);
-      const best = pickBest(results);
-      bestText = best?.outputText ?? bestText;
-      // F13: if the meaning drifted, iterate from the best-so-far, not the drift.
-      currentText = scores.fidelity < FIDELITY_FLOOR ? bestText : w.text;
-      prevScores = scores;
-      prevDraft = w.text;
+      // F13: hill climb — always advance from the best draft so far. If this
+      // draft regressed (or drifted below fidelity, which caps its overall so it
+      // can't be best), we resume from the peak instead of compounding a worse
+      // draft. The Coach's next relative judgment is likewise anchored to it.
+      const best = pickBest(results) ?? iter;
+      bestText = best.outputText;
+      currentText = bestText;
+      prevScores = best.scores;
+      prevDraft = best.outputText;
     } else {
       // F18: unscored iteration — keep prior instructions, continue from this draft.
       currentText = w.text;

@@ -2,13 +2,38 @@ import { useState } from "react";
 import type { LiveCard } from "../lib/cards.ts";
 import { computeMetrics } from "../shared/text-metrics.ts";
 import { reachedTarget } from "../shared/scoring.ts";
-import { DiffText } from "./DiffText.tsx";
 
-function CopyButton({ label, text }: { label: string; text: string }) {
+function CopyIcon({ done }: { done: boolean }) {
+  return done ? (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <path
+        d="M20 6L9 17l-5-5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ) : (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden>
+      <rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="M5 15V5a2 2 0 0 1 2-2h10"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function CopyFinal({ text }: { text: string }) {
   const [done, setDone] = useState(false);
   return (
     <button
       type="button"
+      title="Copy final text"
+      aria-label={done ? "Copied" : "Copy final text"}
       onClick={async () => {
         try {
           await navigator.clipboard.writeText(text);
@@ -18,20 +43,22 @@ function CopyButton({ label, text }: { label: string; text: string }) {
           /* clipboard unavailable */
         }
       }}
-      className="rounded-md border border-hair px-3 py-1.5 text-xs text-ink transition-colors hover:border-accent/50 hover:text-accent focus-visible:outline-2 focus-visible:outline-accent"
+      className={`rounded-md p-1 transition-colors focus-visible:outline-2 focus-visible:outline-accent ${
+        done ? "text-accent" : "text-muted hover:text-accent"
+      }`}
     >
-      {done ? "Copied" : label}
+      <CopyIcon done={done} />
     </button>
   );
 }
 
 function Delta({ label, from, to }: { label: string; from: number; to: number }) {
-  const better = to !== from;
+  const changed = to !== from;
   return (
     <span className="tnum whitespace-nowrap text-xs text-muted">
       {label} <span className="text-ink">{from}</span>
       <span className="mx-1">→</span>
-      <span className={better ? "text-accent" : "text-ink"}>{to}</span>
+      <span className={changed ? "text-accent" : "text-ink"}>{to}</span>
     </span>
   );
 }
@@ -40,34 +67,14 @@ export function FinalPanel({
   original,
   authorLabel,
   winner,
-  cards,
-  onReset,
-  onTryAnother,
 }: {
   original: string;
   authorLabel: string;
   winner: LiveCard;
-  cards: LiveCard[];
-  onReset: () => void;
-  onTryAnother: () => void;
 }) {
   const om = computeMetrics(original);
   const fm = winner.metrics;
   const score = winner.scores?.overall ?? 0;
-
-  const transcript = [
-    `StyleCraft — ${authorLabel}`,
-    `Original: ${original}`,
-    "",
-    ...cards.map(
-      (c) =>
-        `Iteration ${c.iterationNumber}${
-          c.scores ? ` (match ${c.scores.overall})` : " (scoring failed)"
-        }: ${c.outputText}`,
-    ),
-    "",
-    `Final (iteration ${winner.iterationNumber}): ${winner.outputText}`,
-  ].join("\n");
 
   return (
     <section
@@ -76,8 +83,7 @@ export function FinalPanel({
     >
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h2 className="text-base font-medium tracking-tight text-ink">
-          {authorLabel} match{" "}
-          <span className="tnum text-accent">{score}</span>
+          {authorLabel} match <span className="tnum text-accent">{score}</span>
           <span className="text-muted"> · winner: iteration {winner.iterationNumber}</span>
         </h2>
         {reachedTarget(score) && (
@@ -93,12 +99,11 @@ export function FinalPanel({
           <p className="reading text-[18px] leading-relaxed text-muted">{original}</p>
         </div>
         <div className="flex flex-col gap-1.5 rounded-lg border border-accent/30 bg-white p-4">
-          <span className="text-[10px] uppercase tracking-widest text-accent">Final</span>
-          <DiffText
-            before={original}
-            after={winner.outputText}
-            className="reading text-[18px] leading-relaxed text-ink"
-          />
+          <div className="flex items-center justify-between">
+            <span className="text-[10px] uppercase tracking-widest text-accent">Final</span>
+            <CopyFinal text={winner.outputText} />
+          </div>
+          <p className="reading text-[18px] leading-relaxed text-ink">{winner.outputText}</p>
         </div>
       </div>
 
@@ -107,25 +112,6 @@ export function FinalPanel({
         <Delta label="avg sentence" from={om.avgSentenceLen} to={fm.avgSentenceLen} />
         <Delta label="hedges" from={om.hedgeCount} to={fm.hedgeCount} />
         <Delta label="adverbs" from={om.adverbCount} to={fm.adverbCount} />
-      </div>
-
-      <div className="flex flex-wrap gap-2">
-        <CopyButton label="Copy final" text={winner.outputText} />
-        <CopyButton label="Copy all iterations" text={transcript} />
-        <button
-          type="button"
-          onClick={onTryAnother}
-          className="rounded-md border border-hair px-3 py-1.5 text-xs text-ink transition-colors hover:border-accent/50 hover:text-accent focus-visible:outline-2 focus-visible:outline-accent"
-        >
-          Try another author
-        </button>
-        <button
-          type="button"
-          onClick={onReset}
-          className="rounded-md border border-hair px-3 py-1.5 text-xs text-ink transition-colors hover:border-accent/50 hover:text-accent focus-visible:outline-2 focus-visible:outline-accent"
-        >
-          Start over
-        </button>
       </div>
     </section>
   );

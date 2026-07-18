@@ -12,10 +12,6 @@ import { ProgressLoop } from "./components/ProgressLoop.tsx";
 import { RunView } from "./components/RunView.tsx";
 import { CloudNote } from "./components/CloudNote.tsx";
 
-const DEMO_TEXT =
-  "The meeting was good and we discussed many things that will probably help us in the future.";
-const DEMO_AUTHOR: AuthorTarget = "hemingway";
-
 type Source = "live" | "sample" | null;
 
 export function App() {
@@ -43,6 +39,7 @@ export function App() {
 
   const runner = source === "live" ? live : source === "sample" ? replay : null;
   const busy = live.phase === "running" || replay.phase === "running";
+  const showFinal = runner?.phase === "done";
 
   const len = text.trim().length;
   const canRun = !busy && len >= MIN_INPUT_CHARS && text.length <= MAX_INPUT_CHARS;
@@ -94,56 +91,49 @@ export function App() {
         <p className="max-w-prose text-[19px] leading-relaxed text-muted">
           Rewrite your words in a master&rsquo;s voice. StyleCraft rewrites your text,
           then critiques its own work and revises again — five times — getting closer
-          with each pass. Watch it improve, step by step.
+          with each pass. Watch it climb, step by step.
         </p>
       </header>
 
-      {/* Try your own — always visible */}
-      <section className="flex flex-col gap-5">
-        <TextInput
-          value={text}
-          onChange={setText}
-          onLoadExample={() => {
-            setText(DEMO_TEXT);
-            setAuthor(DEMO_AUTHOR);
-          }}
-          disabled={busy}
-        />
-        <AuthorSelector value={author} onChange={setAuthor} disabled={busy} />
-        <div className="flex flex-wrap items-center gap-3">
-          <button
-            type="button"
-            disabled={!canRun}
-            onClick={runOwn}
-            className="rounded-md bg-accent px-5 py-2.5 text-[15px] font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            Run 5 revisions →
-          </button>
-          {mock && (
-            <span className="rounded-full border border-hair px-2 py-0.5 text-[10px] uppercase tracking-wide text-warn">
-              simulated (no cloud key)
-            </span>
+      {/* Input beside real examples — write your own, or watch one first. */}
+      <section className="grid gap-8 lg:grid-cols-2">
+        <div className="flex flex-col gap-5">
+          <TextInput value={text} onChange={setText} disabled={busy} />
+          <AuthorSelector value={author} onChange={setAuthor} disabled={busy} />
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              type="button"
+              disabled={!canRun}
+              onClick={runOwn}
+              className="rounded-md bg-accent px-5 py-2.5 text-[15px] font-medium text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Rewrite in {AUTHORS[author].label}&rsquo;s voice →
+            </button>
+            {mock && (
+              <span className="rounded-full border border-hair px-2 py-0.5 text-[10px] uppercase tracking-wide text-warn">
+                simulated (no cloud key)
+              </span>
+            )}
+          </div>
+          <CloudNote />
+          {live.phase === "error" && (
+            <p className="rounded-md border border-bad/30 bg-bad/5 px-3 py-2 text-sm text-bad" role="alert">
+              {live.error} — adjust and try again.
+            </p>
           )}
+          {loadError && <p className="text-sm text-bad">{loadError}</p>}
         </div>
-        <CloudNote />
-        {live.phase === "error" && (
-          <p className="rounded-md border border-bad/30 bg-bad/5 px-3 py-2 text-sm text-bad" role="alert">
-            {live.error} — adjust and try again.
-          </p>
-        )}
-        {loadError && <p className="text-sm text-bad">{loadError}</p>}
+
+        <Gallery onSelect={runSample} selectedId={selectedId} disabled={busy} />
       </section>
 
       {/* Unified run area (live run or sample replay) */}
       {runner && source && (
         <div ref={runRef} className="flex flex-col gap-4 scroll-mt-6">
           <div className="flex items-start justify-between gap-3">
-            <p className="reading text-[18px] leading-relaxed text-muted">
-              <span className="text-ink">Original.</span> {context.original}
-              <span className="ml-2 text-[13px] text-muted">
-                — in the voice of {context.authorLabel}
-                {source === "sample" && " · example"}
-              </span>
+            <p className="text-[13px] text-muted">
+              in the voice of <span className="text-ink">{context.authorLabel}</span>
+              {source === "sample" && " · example"}
             </p>
             <button
               type="button"
@@ -153,6 +143,13 @@ export function App() {
               Clear
             </button>
           </div>
+
+          {/* Original shown here only while climbing; the Final panel carries it once done. */}
+          {!showFinal && context.original && (
+            <p className="reading text-[18px] leading-relaxed text-muted">
+              <span className="text-ink">Original.</span> {context.original}
+            </p>
+          )}
 
           {runner.phase === "running" && (
             <ProgressLoop
@@ -169,17 +166,12 @@ export function App() {
               authorLabel={context.authorLabel}
               cards={runner.cards}
               winnerIndex={runner.winnerIndex}
-              showFinal={runner.phase === "done"}
+              showFinal={showFinal}
               note={source === "sample" ? "pre-generated example" : mock ? "simulated" : undefined}
-              onReset={clearRun}
-              onTryAnother={clearRun}
             />
           )}
         </div>
       )}
-
-      {/* Examples — always visible */}
-      <Gallery onSelect={runSample} selectedId={selectedId} disabled={busy} />
 
       <footer className="mt-auto border-t border-hair pt-4 text-[11px] text-muted">
         Writer: Gemini 2.5 Flash-Lite · Coach: Gemini 2.5 Pro · no writing stored.

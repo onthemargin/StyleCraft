@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
 import type { LiveCard } from "../lib/cards.ts";
-import { ScoreProgression } from "./ScoreProgression.tsx";
+import { ClimbChart } from "./ClimbChart.tsx";
 import { IterationCard } from "./IterationCard.tsx";
 import { FinalPanel } from "./FinalPanel.tsx";
 
 // Shared renderer for a run — used by both live mode and gallery replay.
-// Cards stack newest-first (reverse-chronological); the Final panel is pinned
-// on top when the run is complete.
+// The climb chart sits on top and grows as iterations score; the Final panel
+// pins above the reverse-chronological iteration history when the run completes.
 export function RunView({
   original,
   authorLabel,
@@ -14,8 +14,6 @@ export function RunView({
   winnerIndex,
   showFinal,
   note,
-  onReset,
-  onTryAnother,
 }: {
   original: string;
   authorLabel: string;
@@ -23,8 +21,6 @@ export function RunView({
   winnerIndex: number;
   showFinal: boolean;
   note?: string;
-  onReset: () => void;
-  onTryAnother: () => void;
 }) {
   const finalRef = useRef<HTMLDivElement>(null);
   const winner = winnerIndex >= 0 ? cards[winnerIndex] : null;
@@ -35,30 +31,23 @@ export function RunView({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <div className="flex items-center gap-3">
+      <div className="rounded-lg border border-hair bg-white/40 px-4 pb-2 pt-3">
+        <div className="mb-1 flex items-center justify-between">
           <span className="text-[11px] uppercase tracking-widest text-muted">
-            {authorLabel} match
+            {authorLabel} match — climbing
           </span>
-          <ScoreProgression cards={cards} winnerIndex={winnerIndex} />
+          {note && (
+            <span className="rounded-full border border-hair px-2 py-0.5 text-[10px] uppercase tracking-wide text-muted">
+              {note}
+            </span>
+          )}
         </div>
-        {note && (
-          <span className="rounded-full border border-hair px-2 py-0.5 text-[10px] uppercase tracking-wide text-muted">
-            {note}
-          </span>
-        )}
+        <ClimbChart cards={cards} winnerIndex={winnerIndex} />
       </div>
 
       {showFinal && winner && (
         <div ref={finalRef} tabIndex={-1} className="outline-none">
-          <FinalPanel
-            original={original}
-            authorLabel={authorLabel}
-            winner={winner}
-            cards={cards}
-            onReset={onReset}
-            onTryAnother={onTryAnother}
-          />
+          <FinalPanel original={original} authorLabel={authorLabel} winner={winner} />
         </div>
       )}
 
